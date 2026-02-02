@@ -1,0 +1,165 @@
+.formCard {
+  display: grid;
+  gap: 16px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-ink);
+}
+
+.field input,
+.field select {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--stroke);
+  background: #fffdf8;
+  font-size: 14px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--page-ink);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.primary {
+  border: none;
+  background: var(--accent);
+  color: #1b1b1b;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.ghost {
+  border: 1px solid var(--page-ink);
+  background: transparent;
+  color: var(--page-ink);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.delete {
+  border: 1px solid #c23b2a;
+  color: #c23b2a;
+  background: transparent;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.edit {
+  border: 1px solid var(--page-ink);
+  color: var(--page-ink);
+  background: transparent;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hint {
+  color: var(--muted-ink);
+  font-size: 13px;
+}
+
+.listRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #fbfaf6;
+}
+
+.listMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.error {
+  font-size: 12px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #b63a2f;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.45);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  z-index: 30;
+}
+
+.modal {
+  width: min(720px, 100%);
+  background: var(--panel);
+  border-radius: 20px;
+  padding: 22px;
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.close {
+  border: none;
+  background: #f6f2ea;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+@media (max-width: 980px) {
+  .formGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

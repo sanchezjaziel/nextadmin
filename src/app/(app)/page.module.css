@@ -1,0 +1,371 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 32px;
+  align-items: stretch;
+}
+
+.heroCopy h1 {
+  font-family: var(--font-display), serif;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.kicker {
+  display: inline-flex;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--sand);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.lead {
+  color: var(--muted-ink);
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 12px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+
+.primary {
+  border: none;
+  background: var(--accent);
+  color: #1b1b1b;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.secondary {
+  border: 1px solid var(--page-ink);
+  background: transparent;
+  color: var(--page-ink);
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.heroStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.statCard {
+  background: var(--panel);
+  border-radius: 18px;
+  padding: 16px;
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow);
+}
+
+.statCard p {
+  color: var(--muted-ink);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.statCard strong {
+  display: block;
+  font-size: 22px;
+  margin: 8px 0 6px;
+}
+
+.statCard span {
+  font-size: 12px;
+  color: var(--muted-ink);
+}
+
+.snapshot {
+  background: var(--panel);
+  border-radius: 24px;
+  padding: 24px;
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.snapshotHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.snapshotHeader p {
+  color: var(--muted-ink);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.snapshotHeader h3 {
+  font-size: 20px;
+  margin-top: 6px;
+}
+
+.chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--mint);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.balance {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.snapshotBars {
+  display: grid;
+  gap: 12px;
+}
+
+.snapshotBars span {
+  font-size: 12px;
+  color: var(--muted-ink);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.bar {
+  height: 8px;
+  border-radius: 999px;
+  background: #f1efe9;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.barFill[data-size="70"] {
+  width: 70%;
+}
+
+.barFill[data-size="45"] {
+  width: 45%;
+}
+
+.barFill[data-size="30"] {
+  width: 30%;
+}
+
+.snapshotFooter {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ghost {
+  border: none;
+  background: transparent;
+  color: var(--page-ink);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.panelHeader h2 {
+  font-size: 18px;
+}
+
+.tag {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--sky);
+}
+
+.billList,
+.accountList,
+.progressList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.rangeToggle {
+  display: inline-flex;
+  gap: 8px;
+  padding: 6px;
+  background: #f6f2ea;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.range,
+.rangeActive {
+  border: none;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  background: transparent;
+  color: var(--page-ink);
+}
+
+.rangeActive {
+  background: var(--page-ink);
+  color: var(--page-bg);
+}
+
+.billItem,
+.accountItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  background: #fbfaf6;
+}
+
+.billItem p,
+.accountItem p,
+.progressRow p {
+  font-weight: 600;
+}
+
+.billItem span,
+.accountItem span,
+.progressRow span {
+  font-size: 12px;
+  color: var(--muted-ink);
+}
+
+.ghostWide {
+  border: 1px dashed var(--page-ink);
+  background: transparent;
+  padding: 10px 16px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.progressRow {
+  display: grid;
+  gap: 8px;
+}
+
+.progress {
+  height: 10px;
+  background: #f1efe9;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress div {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent-dark);
+}
+
+.accountTotals {
+  border-top: 1px solid var(--stroke);
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.footerCard {
+  background: linear-gradient(120deg, #ffd8b6 0%, #ffe9d4 50%, #f6f0e7 100%);
+  border-radius: 24px;
+  padding: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow);
+}
+
+.footerCard h2 {
+  font-family: var(--font-display), serif;
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.footerCard p {
+  color: var(--muted-ink);
+  max-width: 520px;
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .heroStats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 840px) {
+  .heroStats {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footerCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
